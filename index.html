@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>拓哈苏(无锡)贸易有限公司 | TOHATSU 中国区总代理 | 日本东发舷外机</title>
+<meta name="description" content="拓哈苏(无锡)贸易有限公司 - 日本TOHATSU(东发)品牌中国区独家授权总代理,提供2.5HP至250HP全系列高性能舷外机产品及专业售后服务。">
+<meta name="keywords" content="TOHATSU,东发,舷外机,日本舷外机,船用发动机,中国总代理,无锡">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#0d1b2e;
+  --navy-dark:#060e1a;
+  --blue:#0057a8;
+  --blue-dark:#003f7d;
+  --blue-light:#4da6ff;
+  --light:#f4f6f9;
+  --white:#fff;
+  --text:#1a1a2e;
+  --muted:#6b7280;
+  --border:#e2e8f0;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei',sans-serif;
+  background:var(--white);color:var(--text);
+  font-size:15px;line-height:1.7;
+}
+
+/* NAV */
+nav{
+  background:var(--navy);padding:0 40px;
+  display:flex;align-items:center;justify-content:space-between;
+  height:72px;position:sticky;top:0;z-index:100;
+  border-bottom:3px solid var(--blue);
+}
+.logo-area{display:flex;align-items:center}
+.logo-t{
+  font-size:28px;font-weight:900;color:white;letter-spacing:3px;
+  font-family:'Arial Black',Arial,sans-serif;line-height:1;
+}
+.logo-t span{color:var(--blue-light)}
+.logo-sub-text{
+  font-size:10px;color:rgba(255,255,255,0.45);
+  letter-spacing:1.5px;display:block;margin-top:4px;
+}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{
+  color:rgba(255,255,255,0.8);text-decoration:none;
+  font-size:14px;letter-spacing:1px;transition:color .2s;
+}
+.nav-links a:hover{color:white}
+.nav-cta{
+  background:var(--blue);color:white;padding:10px 24px;
+  font-size:13px;border:none;cursor:pointer;letter-spacing:1px;
+  transition:background .2s;
+}
+.nav-cta:hover{background:var(--blue-dark)}
+
+/* HERO */
+.hero{position:relative;height:580px;overflow:hidden;background:#0a1628}
+.hero-slides{
+  display:flex;width:300%;height:100%;
+  transition:transform .8s cubic-bezier(.4,0,.2,1);
+}
+.hero-slide{
+  width:33.333%;height:100%;position:relative;flex-shrink:0;
+}
+.slide-img{
+  width:100%;height:100%;object-fit:cover;display:block;
+}
+.slide-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to right,rgba(10,22,40,0.85) 30%,rgba(10,22,40,0.2) 100%);
+}
+.hero-content{
+  position:absolute;left:56px;top:50%;transform:translateY(-50%);
+  z-index:2;max-width:540px;
+}
+.h-badge{
+  font-size:11px;letter-spacing:4px;color:rgba(255,255,255,0.6);
+  margin-bottom:18px;text-transform:uppercase;
+  border-left:3px solid var(--blue);padding-left:14px;
+}
+.h-title{
+  font-size:54px;font-weight:800;color:white;line-height:1.1;
+  margin-bottom:14px;font-family:'Arial Black',Arial,sans-serif;
+}
+.h-title em{color:var(--blue-light);font-style:normal}
+.h-sub{
+  font-size:15px;color:rgba(255,255,255,0.7);
+  margin-bottom:32px;line-height:1.9;max-width:480px;
+}
+.h-btns{display:flex;gap:14px}
+.btn-p{
+  background:var(--blue);color:white;padding:14px 32px;
+  font-size:13px;letter-spacing:1.5px;border:none;cursor:pointer;
+  transition:background .2s;font-weight:600;
+}
+.btn-p:hover{background:var(--blue-dark)}
+.btn-s{
+  border:1px solid rgba(255,255,255,0.4);color:white;
+  padding:14px 32px;font-size:13px;letter-spacing:1.5px;
+  background:transparent;cursor:pointer;transition:all .2s;
+}
+.btn-s:hover{border-color:white;background:rgba(255,255,255,0.05)}
+.dots{
+  position:absolute;bottom:28px;left:56px;
+  display:flex;gap:8px;z-index:10;
+}
+.dot{
+  width:28px;height:3px;background:rgba(255,255,255,0.3);
+  cursor:pointer;transition:all .3s;
+}
+.dot.on{background:white;width:40px}
+
+/* SECTIONS */
+.sec{padding:80px 40px}
+.sh{margin-bottom:48px}
+.s-tag{
+  font-size:11px;letter-spacing:4px;color:var(--blue);
+  margin-bottom:10px;display:block;text-transform:uppercase;font-weight:600;
+}
+.s-title{
+  font-size:30px;font-weight:800;color:var(--navy);
+  font-family:'Arial Black',Arial,sans-serif;
+}
+.s-bar{width:48px;height:3px;background:var(--blue);margin-top:14px}
+
+/* PRODUCTS */
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
+.pc{
+  background:white;overflow:hidden;
+  transition:all .3s;cursor:pointer;position:relative;
+}
+.pc:hover{
+  box-shadow:0 16px 48px rgba(0,87,168,.18);
+  z-index:2;transform:translateY(-4px);
+}
+.pi{
+  height:260px;overflow:hidden;background:#f8f9fb;
+}
+.pi img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .5s;display:block;
+}
+.pc:hover .pi img{transform:scale(1.08)}
+.pb{padding:26px 28px 32px}
+.p-badge{
+  display:inline-block;background:var(--blue);color:white;
+  font-size:10px;letter-spacing:2px;padding:4px 12px;margin-bottom:12px;
+  font-weight:600;
+}
+.p-name{
+  font-size:20px;font-weight:800;color:var(--navy);
+  margin-bottom:6px;font-family:'Arial Black',Arial,sans-serif;
+}
+.p-hp{
+  font-size:13px;color:var(--blue);font-weight:700;
+  letter-spacing:1.5px;margin-bottom:14px;
+}
+.p-desc{font-size:14px;color:var(--muted);line-height:1.9}
+.p-link{
+  font-size:13px;color:var(--blue);font-weight:700;
+  margin-top:18px;display:block;letter-spacing:.5px;
+}
+.p-link:hover{text-decoration:underline}
+
+/* TECH BANNER */
+.tech{
+  display:grid;grid-template-columns:1fr 1fr;
+  min-height:440px;overflow:hidden;position:relative;
+}
+.tl{
+  background:var(--navy);padding:64px 56px;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.t-tag{
+  font-size:11px;letter-spacing:4px;
+  color:var(--blue-light);margin-bottom:20px;
+}
+.t-title{
+  font-size:36px;font-weight:800;color:white;
+  line-height:1.2;margin-bottom:18px;
+  font-family:'Arial Black',Arial,sans-serif;
+}
+.t-text{
+  font-size:14px;color:rgba(255,255,255,.65);
+  line-height:2;margin-bottom:32px;
+}
+.t-features{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:16px;margin-bottom:32px;
+}
+.tf{display:flex;align-items:flex-start;gap:10px}
+.tf-num{
+  font-size:24px;font-weight:900;color:var(--blue-light);
+  font-family:'Arial Black',Arial,sans-serif;line-height:1;
+}
+.tf-text{font-size:12px;color:rgba(255,255,255,.7);line-height:1.6}
+.tr{overflow:hidden;position:relative}
+.tr img{
+  width:100%;height:100%;object-fit:cover;display:block;
+}
+.tr-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to right,var(--navy) 0%,transparent 40%);
+}
+
+/* ABOUT */
+.about{background:var(--light)}
+.about-in{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:64px;align-items:center;
+}
+.a-img{overflow:hidden;height:420px;position:relative}
+.a-img img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .6s;display:block;
+}
+.a-img:hover img{transform:scale(1.04)}
+.about-text{font-size:14px;color:var(--muted);line-height:2;margin-top:24px}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.badge{
+  border:1px solid var(--border);font-size:12px;color:var(--muted);
+  padding:7px 16px;background:white;
+}
+
+/* STATS */
+.stats{background:var(--navy);padding:52px 40px}
+.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.si{
+  text-align:center;padding:24px;
+  border-right:1px solid rgba(255,255,255,.12);
+}
+.si:last-child{border-right:none}
+.sn{
+  font-size:46px;font-weight:900;color:white;line-height:1;
+  font-family:'Arial Black',Arial,sans-serif;
+}
+.su{font-size:15px;color:rgba(255,255,255,.6);margin-left:3px}
+.sl{
+  font-size:12px;color:rgba(255,255,255,.45);
+  letter-spacing:1.5px;margin-top:8px;
+}
+
+/* CONTACT */
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.ci-list{display:flex;flex-direction:column}
+.ci-row{
+  display:flex;align-items:flex-start;gap:18px;
+  padding:22px 0;border-bottom:1px solid var(--border);
+}
+.ci-row:first-child{padding-top:0}
+.ci-row:last-child{border-bottom:none}
+.ci-icon{
+  width:48px;height:48px;background:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;font-size:20px;
+}
+.ci-label{
+  font-size:10px;letter-spacing:2px;
+  color:var(--muted);margin-bottom:4px;
+}
+.ci-val{font-size:15px;color:var(--navy);font-weight:700}
+.ci-sub{font-size:12px;color:var(--muted);margin-top:3px}
+.form-box{background:var(--navy);padding:40px}
+.form-title{
+  font-size:18px;font-weight:800;color:white;
+  margin-bottom:6px;font-family:'Arial Black',Arial,sans-serif;
+}
+.form-subtitle{
+  font-size:12px;color:rgba(255,255,255,.5);
+  margin-bottom:24px;letter-spacing:1px;
+}
+.fl{margin-bottom:16px}
+.fl label{
+  font-size:11px;letter-spacing:1px;
+  color:rgba(255,255,255,.55);display:block;margin-bottom:6px;
+}
+.fl input,.fl textarea,.fl select{
+  width:100%;border:1px solid rgba(255,255,255,.15);
+  padding:12px 14px;font-size:14px;font-family:inherit;
+  outline:none;background:rgba(255,255,255,.06);color:white;
+  transition:border-color .2s;
+}
+.fl input::placeholder,.fl textarea::placeholder{color:rgba(255,255,255,.35)}
+.fl input:focus,.fl textarea:focus,.fl select:focus{
+  border-color:var(--blue);
+}
+.fl select{color:rgba(255,255,255,.75)}
+.fl select option{background:var(--navy);color:white}
+.fl textarea{resize:vertical;min-height:90px}
+.form-btn{
+  width:100%;background:var(--blue);color:white;border:none;
+  padding:15px;font-size:13px;letter-spacing:3px;cursor:pointer;
+  font-family:inherit;transition:background .2s;font-weight:700;
+}
+.form-btn:hover{background:var(--blue-dark)}
+
+/* FOOTER */
+footer{background:var(--navy-dark);padding:40px 40px 24px;border-top:3px solid var(--blue)}
+.ft{
+  display:flex;justify-content:space-between;align-items:flex-start;
+  margin-bottom:32px;padding-bottom:32px;
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.f-logo{
+  font-size:24px;font-weight:900;color:white;letter-spacing:3px;
+  font-family:'Arial Black',Arial,sans-serif;
+}
+.f-logo span{color:var(--blue-light)}
+.f-info{
+  font-size:12px;color:rgba(255,255,255,.4);
+  line-height:2;margin-top:12px;
+}
+.fl-cols{display:flex;gap:48px}
+.fl-col h4{
+  font-size:12px;color:white;letter-spacing:2px;
+  margin-bottom:14px;text-transform:uppercase;
+}
+.fl-col ul{list-style:none}
+.fl-col li{margin-bottom:8px}
+.fl-col a{
+  color:rgba(255,255,255,.4);text-decoration:none;
+  font-size:13px;transition:color .2s;
+}
+.fl-col a:hover{color:white}
+.fb{
+  display:flex;justify-content:space-between;
+  font-size:12px;color:rgba(255,255,255,.3);letter-spacing:.5px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  nav{padding:0 20px;height:64px}
+  .nav-links{display:none}
+  .logo-t{font-size:22px}
+  .hero{height:480px}
+  .hero-content{left:24px;max-width:90%}
+  .h-title{font-size:36px}
+  .sec{padding:48px 20px}
+  .pg{grid-template-columns:1fr}
+  .tech{grid-template-columns:1fr}
+  .tl{padding:40px 24px}
+  .t-title{font-size:26px}
+  .about-in{grid-template-columns:1fr;gap:32px}
+  .a-img{height:280px}
+  .sg{grid-template-columns:repeat(2,1fr)}
+  .si{border-right:none;border-bottom:1px solid rgba(255,255,255,.12)}
+  .contact-in{grid-template-columns:1fr;gap:32px}
+  .ft{flex-direction:column;gap:24px}
+  .fb{flex-direction:column;gap:8px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo-area">
+    <div>
+      <div class="logo-t">TOHATSU<span>.</span></div>
+      <span class="logo-sub-text">拓哈苏(无锡) · 中国区总代理</span>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#home">首页</a></li>
+    <li><a href="#products">产品中心</a></li>
+    <li><a href="#tech">核心技术</a></li>
+    <li><a href="#about">关于我们</a></li>
+    <li><a href="#contact">联系我们</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView()">获取报价</button>
+</nav>
+
+<div class="hero" id="home">
+  <div class="hero-slides" id="slides">
+
+    <div class="hero-slide">
+      <img class="slide-img" src="images/hero-01.jpg" alt="TOHATSU MFS115 舷外机实景">
+      <div class="slide-overlay"></div>
+      <div class="hero-content">
+        <div class="h-badge">TOHATSU · 日本制造 · 始于1922</div>
+        <h1 class="h-title">专业动力<br><em>中国代理</em></h1>
+        <p class="h-sub">拓哈苏(无锡)贸易有限公司,TOHATSU 中国区独家授权总代理,提供 2.5HP 至 250HP 全系列舷外机产品。</p>
+        <div class="h-btns">
+          <button class="btn-p" onclick="document.getElementById('products').scrollIntoView()">浏览产品系列</button>
+          <button class="btn-s" onclick="document.getElementById('contact').scrollIntoView()">立即咨询</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-slide">
+      <img class="slide-img" src="images/hero-02.jpg" alt="TOHATSU 大功率舷外机">
+      <div class="slide-overlay"></div>
+      <div class="hero-content">
+        <div class="h-badge">HIGH POWER · 150 — 250HP</div>
+        <h1 class="h-title">大功率系列<br><em>Feel the Power</em></h1>
+        <p class="h-sub">TOHATSU 旗舰大功率系列,搭载先进四冲程技术,专为执法艇、应急救援及高性能游艇设计。</p>
+        <div class="h-btns">
+          <button class="btn-p" onclick="document.getElementById('products').scrollIntoView()">查看大功率系列</button>
+          <button class="btn-s" onclick="document.getElementById('contact').scrollIntoView()">获取报价</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-slide">
+      <img class="slide-img" src="images/hero-03.jpg" alt="TOHATSU 便携式舷外机">
+      <div class="slide-overlay"></div>
+      <div class="hero-content">
+        <div class="h-badge">PORTABLE · 2.5 — 20HP</div>
+        <h1 class="h-title">便携系列<br><em>Feel the Difference</em></h1>
+        <p class="h-sub">轻量化便携设计,易于携带与安装,适合巡逻救援、小型渔船及水上休闲娱乐用途。</p>
+        <div class="h-btns">
+          <button class="btn-p" onclick="document.getElementById('products').scrollIntoView()">查看便携系列</button>
+          <button class="btn-s" onclick="document.getElementById('contact').scrollIntoView()">联系经销商</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="dots">
+    <div class="dot on" onclick="goSlide(0)"></div>
+    <div class="dot" onclick="goSlide(1)"></div>
+    <div class="dot" onclick="goSlide(2)"></div>
+  </div>
+</div>
+
+<section class="sec" id="products" style="background:white">
+  <div class="sh">
+    <span class="s-tag">OUR OUTBOARDS</span>
+    <div class="s-title">产品系列</div>
+    <div class="s-bar"></div>
+  </div>
+  <div class="pg">
+    <div class="pc">
+      <div class="pi"><img src="images/product-high.jpg" alt="TOHATSU 大功率系列舷外机"></div>
+      <div class="pb">
+        <span class="p-badge">HIGH POWER</span>
+        <div class="p-name">大功率系列</div>
+        <div class="p-hp">150HP — 250HP</div>
+        <p class="p-desc">TOHATSU 旗舰产品,搭载先进四冲程技术,强劲动力满足专业级需求。适用于执法艇、应急救援船及高性能游艇。</p>
+        <span class="p-link">查看详情 →</span>
+      </div>
+    </div>
+    <div class="pc">
+      <div class="pi"><img src="images/product-mid.jpg" alt="TOHATSU 中型系列舷外机"></div>
+      <div class="pb">
+        <span class="p-badge">MID-RANGE</span>
+        <div class="p-name">中型系列</div>
+        <div class="p-hp">25HP — 140HP</div>
+        <p class="p-desc">TOHATSU 核心产品线,四冲程低噪音设计,广泛适用于渔政巡逻、水利执法、水上旅游及商务艇。</p>
+        <span class="p-link">查看详情 →</span>
+      </div>
+    </div>
+    <div class="pc">
+      <div class="pi"><img src="images/hero-03.jpg" alt="TOHATSU 便携系列舷外机"></div>
+      <div class="pb">
+        <span class="p-badge">PORTABLE</span>
+        <div class="p-name">便携式系列</div>
+        <div class="p-hp">2.5HP — 20HP</div>
+        <p class="p-desc">轻量化便携设计,易于携带与安装,适合小型渔船、巡逻艇救援备用动力及水上休闲娱乐。</p>
+        <span class="p-link">查看详情 →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tech" id="tech">
+  <div class="tl">
+    <div class="t-tag">OUR TECHNOLOGY</div>
+    <h2 class="t-title">顶尖技术<br>极致体验</h2>
+    <p class="t-text">TOHATSU 以近百年技术积淀,持续研发轻量化、高可靠性舷外机。凭借独有的直喷技术与严格品质管控,为全球130余个国家的用户提供卓越动力体验。</p>
+    <div class="t-features">
+      <div class="tf">
+        <div class="tf-num">04</div>
+        <div class="tf-text">先进四冲程技术<br>低油耗、低噪音</div>
+      </div>
+      <div class="tf">
+        <div class="tf-num">EFI</div>
+        <div class="tf-text">电子燃油喷射<br>启动迅速、动力稳定</div>
+      </div>
+      <div class="tf">
+        <div class="tf-num">100<span style="font-size:14px">+</span></div>
+        <div class="tf-text">百年品牌历史<br>世界第二大产量</div>
+      </div>
+      <div class="tf">
+        <div class="tf-num">JP</div>
+        <div class="tf-text">日本原装制造<br>严格品质管控</div>
+      </div>
+    </div>
+    <button class="btn-p">了解 TOHATSU 核心技术</button>
+  </div>
+  <div class="tr">
+    <img src="images/product-portable.jpg" alt="TOHATSU 技术">
+    <div class="tr-overlay"></div>
+  </div>
+</div>
+
+<section class="sec about" id="about">
+  <div class="about-in">
+    <div class="a-img">
+      <img src="images/hero-01.jpg" alt="关于拓哈苏(无锡)">
+    </div>
+    <div>
+      <span class="s-tag">ABOUT US</span>
+      <div class="s-title">关于拓哈苏(无锡)</div>
+      <div class="s-bar"></div>
+      <p class="about-text">拓哈苏(无锡)贸易有限公司自 2026年6月 起,正式成为日本TOHATSU品牌中国市场独家代理。我们致力于将TOHATSU的尖端技术和优质产品引入中国市场,为客户提供更安全、更高效、更可靠的动力解决方案。</p>
+      <p class="about-text" style="margin-top:12px">服务范围覆盖江苏、浙江、上海、山东、广东等核心省市,客户群体涵盖船厂、政府执法单位、水利部门、渔业养殖及休闲娱乐市场。</p>
+      <div class="badges">
+        <span class="badge">中国区独家代理</span>
+        <span class="badge">全国服务网络</span>
+        <span class="badge">原厂配件供应</span>
+        <span class="badge">专业售后维修</span>
+        <span class="badge">政府采购资质</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="sg">
+    <div class="si"><div><span class="sn">100</span><span class="su">+ 年</span></div><div class="sl">TOHATSU 品牌历史</div></div>
+    <div class="si"><div><span class="sn">130</span><span class="su">+ 国</span></div><div class="sl">全球销售覆盖</div></div>
+    <div class="si"><div><span class="sn">250</span><span class="su">HP</span></div><div class="sl">最大马力覆盖</div></div>
+    <div class="si"><div><span class="sn">No.2</span></div><div class="sl">全球舷外机产量排名</div></div>
+  </div>
+</div>
+
+<section class="sec" id="contact" style="background:white">
+  <div class="sh">
+    <span class="s-tag">CONTACT US</span>
+    <div class="s-title">联系我们</div>
+    <div class="s-bar"></div>
+  </div>
+  <div class="contact-in">
+    <div>
+      <div class="ci-list">
+        <div class="ci-row">
+          <div class="ci-icon">📍</div>
+          <div>
+            <div class="ci-label">公司地址</div>
+            <div class="ci-val">无锡市惠山区洛社镇钱皋路218号</div>
+            <div class="ci-sub">No.218 Qiangao Road, Luoshe Town, Huishan District, Wuxi</div>
+          </div>
+        </div>
+        <div class="ci-row">
+          <div class="ci-icon">📞</div>
+          <div>
+            <div class="ci-label">联系电话</div>
+            <div class="ci-val">177 0619 8293</div>
+          </div>
+        </div>
+        <div class="ci-row">
+          <div class="ci-icon">✉️</div>
+          <div>
+            <div class="ci-label">电子邮箱</div>
+            <div class="ci-val">sales@tohatsu-wuxi.com</div>
+          </div>
+        </div>
+        <div class="ci-row">
+          <div class="ci-icon">🌐</div>
+          <div>
+            <div class="ci-label">官方网站</div>
+            <div class="ci-val">tohatsu-wuxi.com</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-box">
+      <div class="form-title">立即咨询</div>
+      <div class="form-subtitle">填写信息,我们将在24小时内回复</div>
+      <div class="fl"><label>姓名 *</label><input type="text" placeholder="请输入您的姓名"></div>
+      <div class="fl"><label>联系电话 *</label><input type="text" placeholder="请输入手机号码"></div>
+      <div class="fl"><label>公司名称</label><input type="text" placeholder="请输入公司名称(选填)"></div>
+      <div class="fl">
+        <label>感兴趣的产品</label>
+        <select>
+          <option value="">— 请选择产品系列 —</option>
+          <option>便携式系列(2.5 — 20HP)</option>
+          <option>中型系列(25 — 140HP)</option>
+          <option>大功率系列(150 — 250HP)</option>
+          <option>配件及零部件</option>
+        </select>
+      </div>
+      <div class="fl"><label>咨询内容</label><textarea placeholder="请描述您的需求,包括用途、数量、所在地区等"></textarea></div>
+      <button class="form-btn">提 交 咨 询</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft">
+    <div>
+      <div class="f-logo">TOHATSU<span>.</span></div>
+      <div class="f-info">
+        拓哈苏(无锡)贸易有限公司<br>
+        TOHATSU (WUXI) TRADING CO., LTD<br>
+        无锡市惠山区洛社镇钱皋路218号<br>
+        sales@tohatsu-wuxi.com · 177 0619 8293
+      </div>
+    </div>
+    <div class="fl-cols">
+      <div class="fl-col">
+        <h4>产品系列</h4>
+        <ul>
+          <li><a href="#products">大功率系列</a></li>
+          <li><a href="#products">中型系列</a></li>
+          <li><a href="#products">便携系列</a></li>
+          <li><a href="#products">配件零部件</a></li>
+        </ul>
+      </div>
+      <div class="fl-col">
+        <h4>关于</h4>
+        <ul>
+          <li><a href="#about">公司介绍</a></li>
+          <li><a href="#tech">核心技术</a></li>
+          <li><a href="#contact">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="fb">
+    <div>© 2026 拓哈苏(无锡)贸易有限公司 · 日本TOHATSU中国区总代理</div>
+    <div style="color:rgba(255,255,255,.25)">苏ICP备XXXXXXXX号(备案审核中)</div>
+  </div>
+</footer>
+
+<script>
+let cur=0;
+const TOTAL=3;
+function goSlide(n){
+  cur=n;
+  document.getElementById('slides').style.transform='translateX(-'+(cur*33.333)+'%)';
+  document.querySelectorAll('.dot').forEach(function(d,i){
+    d.classList.toggle('on',i===cur);
+  });
+}
+function next(){goSlide((cur+1)%TOTAL)}
+setInterval(next,5500);
+</script>
+</body>
+</html>
