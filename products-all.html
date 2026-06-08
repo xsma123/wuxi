@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全部型号 | TOHATSU 舷外机全系列 | 拓哈苏(无锡)</title>
+<meta name="description" content="TOHATSU 东发舷外机全部型号:四冲程 MFS、二冲程 M、EverRun MX 系列,覆盖 2.5HP 至 150HP,支持按马力与技术筛选。">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.filter-wrap{max-width:1200px;margin:0 auto;padding:44px 40px 0}
+.filter-title{font-size:13px;letter-spacing:3px;color:var(--navy);font-weight:700;margin-bottom:16px;text-transform:uppercase}
+.filter-box{background:#161b2e;padding:2px;display:flex;flex-direction:column;gap:2px}
+.filter-row{display:flex;gap:2px}
+.filter-label{flex:0 0 180px;display:flex;align-items:center;padding:15px 24px;color:#fff;font-size:14px;font-weight:700;letter-spacing:1px;background:#222a45}
+.filter-btn{flex:1;border:none;background:#222a45;color:rgba(255,255,255,.82);padding:15px 12px;font-size:13.5px;cursor:pointer;font-family:inherit;transition:all .18s;letter-spacing:.5px;white-space:nowrap}
+.filter-btn:hover{background:#2e3858;color:#fff}
+.filter-btn.on{background:#fff;color:#1a2236;font-weight:700}
+.filter-reset{max-width:1200px;margin:0 auto;padding:12px 40px 0;text-align:right}
+.filter-reset button{background:none;border:none;color:var(--muted);font-size:13px;cursor:pointer;font-family:inherit;letter-spacing:.5px}
+.filter-reset button:hover{color:var(--blue)}
+.result-count{max-width:1200px;margin:0 auto;padding:22px 40px 0;font-size:13px;color:var(--muted)}
+.pm-grid{max-width:1200px;margin:0 auto;padding:22px 40px 64px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.pm-card{border:1px solid var(--border);background:#fff;overflow:hidden;transition:all .25s;display:block}
+.pm-card:hover{box-shadow:0 12px 32px rgba(0,87,168,.15);transform:translateY(-4px);border-color:transparent}
+.pm-img{height:230px;background:#f4f2f5;display:flex;align-items:center;justify-content:center;padding:18px;position:relative}
+.pm-img img{max-width:100%;max-height:100%;object-fit:contain}
+.pm-tech-badge{position:absolute;top:10px;left:10px;font-size:10px;letter-spacing:1px;padding:3px 9px;color:#fff;font-weight:600}
+.pm-tech-badge.four{background:var(--navy)}
+.pm-tech-badge.two{background:#5a6b8c}
+.pm-tech-badge.everrun{background:#0a7d5a}
+.pm-body{padding:18px 20px 22px;border-top:1px solid var(--border)}
+.pm-model{font-family:'Arial Black',Arial,sans-serif;font-size:19px;font-weight:900;color:var(--navy);letter-spacing:-.5px;margin-bottom:6px}
+.pm-spec{font-size:13px;color:var(--muted);margin-bottom:14px}
+.pm-spec b{color:var(--blue);font-weight:700;font-size:15px}
+.pm-link{font-size:13px;color:var(--blue);font-weight:700}
+.pm-card:hover .pm-link{text-decoration:underline}
+.no-result{text-align:center;padding:60px 40px;color:var(--muted);font-size:15px;display:none}
+@media(max-width:900px){
+  .filter-wrap{padding:28px 16px 0}
+  .filter-row{flex-direction:column;gap:2px}
+  .filter-label{flex:none;padding:11px 16px;font-size:13px}
+  .filter-reset,.result-count{padding-left:16px;padding-right:16px}
+  .pm-grid{grid-template-columns:repeat(2,1fr);gap:12px;padding:18px 16px 48px}
+  .pm-img{height:180px;padding:12px}
+  .pm-model{font-size:16px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo-area">
+    <div>
+      <div class="logo-t">TOHATSU<span>.</span></div>
+      <span class="logo-sub-text">拓哈苏(无锡) · 中国区总代理</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">首页</a></li>
+    <li><a href="products.html" class="active">产品系列</a></li>
+    <li><a href="about.html">关于我们</a></li>
+    <li><a href="contact.html">联系我们</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">获取报价</a>
+  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
+
+<div class="page-banner">
+  <div class="page-banner-content">
+    <div class="pb-tag">ALL MODELS · 全系列型号</div>
+    <h1>全部型号</h1>
+    <p class="pb-sub">TOHATSU 舷外机全系列,涵盖四冲程 MFS、二冲程 M、EverRun MX 三大产品线,覆盖 2.5HP 至 150HP。可按马力与技术筛选。</p>
+  </div>
+</div>
+
+<div class="filter-wrap">
+  <div class="filter-title">按条件筛选</div>
+  <div class="filter-box">
+    <div class="filter-row">
+      <div class="filter-label">马力</div>
+      <button class="filter-btn on" data-filter="power" data-val="all">全部</button>
+      <button class="filter-btn" data-filter="power" data-val="mid">中型 25-150HP</button>
+      <button class="filter-btn" data-filter="power" data-val="port">便携 2.5-20HP</button>
+    </div>
+    <div class="filter-row">
+      <div class="filter-label">技术</div>
+      <button class="filter-btn on" data-filter="tech" data-val="all">全部</button>
+      <button class="filter-btn" data-filter="tech" data-val="four">四冲程</button>
+      <button class="filter-btn" data-filter="tech" data-val="two">二冲程</button>
+      <button class="filter-btn" data-filter="tech" data-val="everrun">EverRun</button>
+    </div>
+  </div>
+</div>
+<div class="filter-reset"><button onclick="resetFilter()">&gt; 重置筛选</button></div>
+<div class="result-count" id="resultCount"></div>
+
+<div class="pm-grid" id="modelGrid">
+    <a href="contact.html" class="pm-card" data-power="mid" data-tech="four">
+      <div class="pm-img"><span class="pm-tech-badge four">四冲程</span><img src="images/models/mfs150a.jpg" alt="TOHATSU MFS150A"></div>
+      <div class="pm-body"><div class="pm-model">MFS150A</div><div class="pm-spec"><b>150HP</b> · 四冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="mid" data-tech="four">
+      <div class="pm-img"><span class="pm-tech-badge four">四冲程</span><img src="images/models/mfs140a.jpg" alt="TOHATSU MFS140A"></div>
+      <div class="pm-body"><div class="pm-model">MFS140A</div><div class="pm-spec"><b>140HP</b> · 四冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="mid" data-tech="four">
+      <div class="pm-img"><span class="pm-tech-badge four">四冲程</span><img src="images/models/mfs115a.jpg" alt="TOHATSU MFS115A"></div>
+      <div class="pm-body"><div class="pm-model">MFS115A</div><div class="pm-spec"><b>115HP</b> · 四冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="mid" data-tech="four">
+      <div class="pm-img"><span class="pm-tech-badge four">四冲程</span><img src="images/models/mfs100.jpg" alt="TOHATSU MFS100"></div>
+      <div class="pm-body"><div class="pm-model">MFS100</div><div class="pm-spec"><b>100HP</b> · 四冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="mid" data-tech="four">
+      <div class="pm-img"><span class="pm-tech-badge four">四冲程</span><img src="images/models/mfs90.jpg" alt="TOHATSU MFS90"></div>
+      <div class="pm-body"><div class="pm-model">MFS90</div><div class="pm-spec"><b>90HP</b> · 四冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="mid" data-tech="four">
+      <div class="pm-img"><span class="pm-tech-badge four">四冲程</span><img src="images/models/mfs75.jpg" alt="TOHATSU MFS75"></div>
+      <div class="pm-body"><div class="pm-model">MFS75</div><div class="pm-spec"><b>75HP</b> · 四冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="mid" data-tech="four">
+      <div class="pm-img"><span class="pm-tech-badge four">四冲程</span><img src="images/models/mfs60a.jpg" alt="TOHATSU MFS60A"></div>
+      <div class="pm-body"><div class="pm-model">MFS60A</div><div class="pm-spec"><b>60HP</b> · 四冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="mid" data-tech="four">
+      <div class="pm-img"><span class="pm-tech-badge four">四冲程</span><img src="images/models/mfs50a.jpg" alt="TOHATSU MFS50A"></div>
+      <div class="pm-body"><div class="pm-model">MFS50A</div><div class="pm-spec"><b>50HP</b> · 四冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="mid" data-tech="four">
+      <div class="pm-img"><span class="pm-tech-badge four">四冲程</span><img src="images/models/mfs40a.jpg" alt="TOHATSU MFS40A"></div>
+      <div class="pm-body"><div class="pm-model">MFS40A</div><div class="pm-spec"><b>40HP</b> · 四冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="mid" data-tech="four">
+      <div class="pm-img"><span class="pm-tech-badge four">四冲程</span><img src="images/models/mfs30.jpg" alt="TOHATSU MFS30"></div>
+      <div class="pm-body"><div class="pm-model">MFS30</div><div class="pm-spec"><b>30HP</b> · 四冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="mid" data-tech="four">
+      <div class="pm-img"><span class="pm-tech-badge four">四冲程</span><img src="images/models/mfs25d.jpg" alt="TOHATSU MFS25D"></div>
+      <div class="pm-body"><div class="pm-model">MFS25D</div><div class="pm-spec"><b>25HP</b> · 四冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="port" data-tech="four">
+      <div class="pm-img"><span class="pm-tech-badge four">四冲程</span><img src="images/models/mfs20e.jpg" alt="TOHATSU MFS20E"></div>
+      <div class="pm-body"><div class="pm-model">MFS20E</div><div class="pm-spec"><b>20HP</b> · 四冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="port" data-tech="four">
+      <div class="pm-img"><span class="pm-tech-badge four">四冲程</span><img src="images/models/mfs15e.jpg" alt="TOHATSU MFS15E"></div>
+      <div class="pm-body"><div class="pm-model">MFS15E</div><div class="pm-spec"><b>15HP</b> · 四冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="port" data-tech="four">
+      <div class="pm-img"><span class="pm-tech-badge four">四冲程</span><img src="images/models/mfs99e.jpg" alt="TOHATSU MFS9.9E"></div>
+      <div class="pm-body"><div class="pm-model">MFS9.9E</div><div class="pm-spec"><b>9.9HP</b> · 四冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="port" data-tech="four">
+      <div class="pm-img"><span class="pm-tech-badge four">四冲程</span><img src="images/models/mfs98c.jpg" alt="TOHATSU MFS9.8C"></div>
+      <div class="pm-body"><div class="pm-model">MFS9.8C</div><div class="pm-spec"><b>9.8HP</b> · 四冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="port" data-tech="four">
+      <div class="pm-img"><span class="pm-tech-badge four">四冲程</span><img src="images/models/mfs8c.jpg" alt="TOHATSU MFS8C"></div>
+      <div class="pm-body"><div class="pm-model">MFS8C</div><div class="pm-spec"><b>8HP</b> · 四冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="port" data-tech="four">
+      <div class="pm-img"><span class="pm-tech-badge four">四冲程</span><img src="images/models/mfs6d.jpg" alt="TOHATSU MFS6D"></div>
+      <div class="pm-body"><div class="pm-model">MFS6D</div><div class="pm-spec"><b>6HP</b> · 四冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="port" data-tech="four">
+      <div class="pm-img"><span class="pm-tech-badge four">四冲程</span><img src="images/models/mfs5d.jpg" alt="TOHATSU MFS5D"></div>
+      <div class="pm-body"><div class="pm-model">MFS5D</div><div class="pm-spec"><b>5HP</b> · 四冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="port" data-tech="four">
+      <div class="pm-img"><span class="pm-tech-badge four">四冲程</span><img src="images/models/mfs4d.jpg" alt="TOHATSU MFS4D"></div>
+      <div class="pm-body"><div class="pm-model">MFS4D</div><div class="pm-spec"><b>4HP</b> · 四冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="port" data-tech="four">
+      <div class="pm-img"><span class="pm-tech-badge four">四冲程</span><img src="images/models/mfs35c.jpg" alt="TOHATSU MFS3.5C"></div>
+      <div class="pm-body"><div class="pm-model">MFS3.5C</div><div class="pm-spec"><b>3.5HP</b> · 四冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="port" data-tech="four">
+      <div class="pm-img"><span class="pm-tech-badge four">四冲程</span><img src="images/models/mfs2_5.jpg" alt="TOHATSU MFS2.5"></div>
+      <div class="pm-body"><div class="pm-model">MFS2.5</div><div class="pm-spec"><b>2.5HP</b> · 四冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="mid" data-tech="two">
+      <div class="pm-img"><span class="pm-tech-badge two">二冲程</span><img src="images/models/m50.jpg" alt="TOHATSU M50"></div>
+      <div class="pm-body"><div class="pm-model">M50</div><div class="pm-spec"><b>50HP</b> · 二冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="mid" data-tech="two">
+      <div class="pm-img"><span class="pm-tech-badge two">二冲程</span><img src="images/models/m40.jpg" alt="TOHATSU M40"></div>
+      <div class="pm-body"><div class="pm-model">M40</div><div class="pm-spec"><b>40HP</b> · 二冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="mid" data-tech="two">
+      <div class="pm-img"><span class="pm-tech-badge two">二冲程</span><img src="images/models/m30h.jpg" alt="TOHATSU M30H"></div>
+      <div class="pm-body"><div class="pm-model">M30H</div><div class="pm-spec"><b>30HP</b> · 二冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="mid" data-tech="two">
+      <div class="pm-img"><span class="pm-tech-badge two">二冲程</span><img src="images/models/m25.jpg" alt="TOHATSU M25"></div>
+      <div class="pm-body"><div class="pm-model">M25</div><div class="pm-spec"><b>25HP</b> · 二冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="port" data-tech="two">
+      <div class="pm-img"><span class="pm-tech-badge two">二冲程</span><img src="images/models/m18.jpg" alt="TOHATSU M18"></div>
+      <div class="pm-body"><div class="pm-model">M18</div><div class="pm-spec"><b>18HP</b> · 二冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="port" data-tech="two">
+      <div class="pm-img"><span class="pm-tech-badge two">二冲程</span><img src="images/models/m15.jpg" alt="TOHATSU M15"></div>
+      <div class="pm-body"><div class="pm-model">M15</div><div class="pm-spec"><b>15HP</b> · 二冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="port" data-tech="two">
+      <div class="pm-img"><span class="pm-tech-badge two">二冲程</span><img src="images/models/m99.jpg" alt="TOHATSU M9.9"></div>
+      <div class="pm-body"><div class="pm-model">M9.9</div><div class="pm-spec"><b>9.9HP</b> · 二冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="port" data-tech="two">
+      <div class="pm-img"><span class="pm-tech-badge two">二冲程</span><img src="images/models/m98.jpg" alt="TOHATSU M9.8"></div>
+      <div class="pm-body"><div class="pm-model">M9.8</div><div class="pm-spec"><b>9.8HP</b> · 二冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="port" data-tech="two">
+      <div class="pm-img"><span class="pm-tech-badge two">二冲程</span><img src="images/models/m8.jpg" alt="TOHATSU M8"></div>
+      <div class="pm-body"><div class="pm-model">M8</div><div class="pm-spec"><b>8HP</b> · 二冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="port" data-tech="two">
+      <div class="pm-img"><span class="pm-tech-badge two">二冲程</span><img src="images/models/m5.jpg" alt="TOHATSU M5"></div>
+      <div class="pm-body"><div class="pm-model">M5</div><div class="pm-spec"><b>5HP</b> · 二冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="port" data-tech="two">
+      <div class="pm-img"><span class="pm-tech-badge two">二冲程</span><img src="images/models/m4.jpg" alt="TOHATSU M4"></div>
+      <div class="pm-body"><div class="pm-model">M4</div><div class="pm-spec"><b>4HP</b> · 二冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="port" data-tech="two">
+      <div class="pm-img"><span class="pm-tech-badge two">二冲程</span><img src="images/models/m35.jpg" alt="TOHATSU M3.5"></div>
+      <div class="pm-body"><div class="pm-model">M3.5</div><div class="pm-spec"><b>3.5HP</b> · 二冲程</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="mid" data-tech="everrun">
+      <div class="pm-img"><span class="pm-tech-badge everrun">EverRun</span><img src="images/models/mx50.jpg" alt="TOHATSU MX50"></div>
+      <div class="pm-body"><div class="pm-model">MX50</div><div class="pm-spec"><b>50HP</b> · EverRun</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="mid" data-tech="everrun">
+      <div class="pm-img"><span class="pm-tech-badge everrun">EverRun</span><img src="images/models/mx40.jpg" alt="TOHATSU MX40"></div>
+      <div class="pm-body"><div class="pm-model">MX40</div><div class="pm-spec"><b>40HP</b> · EverRun</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="mid" data-tech="everrun">
+      <div class="pm-img"><span class="pm-tech-badge everrun">EverRun</span><img src="images/models/mx30.jpg" alt="TOHATSU MX30"></div>
+      <div class="pm-body"><div class="pm-model">MX30</div><div class="pm-spec"><b>30HP</b> · EverRun</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="mid" data-tech="everrun">
+      <div class="pm-img"><span class="pm-tech-badge everrun">EverRun</span><img src="images/models/mx25.jpg" alt="TOHATSU MX25"></div>
+      <div class="pm-body"><div class="pm-model">MX25</div><div class="pm-spec"><b>25HP</b> · EverRun</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="port" data-tech="everrun">
+      <div class="pm-img"><span class="pm-tech-badge everrun">EverRun</span><img src="images/models/mx18.jpg" alt="TOHATSU MX18"></div>
+      <div class="pm-body"><div class="pm-model">MX18</div><div class="pm-spec"><b>18HP</b> · EverRun</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+    <a href="contact.html" class="pm-card" data-power="port" data-tech="everrun">
+      <div class="pm-img"><span class="pm-tech-badge everrun">EverRun</span><img src="images/models/mx15.jpg" alt="TOHATSU MX15"></div>
+      <div class="pm-body"><div class="pm-model">MX15</div><div class="pm-spec"><b>15HP</b> · EverRun</div><span class="pm-link">咨询此型号 →</span></div>
+    </a>
+</div>
+<div class="no-result" id="noResult">该筛选条件下暂无型号,请重置或更换条件。</div>
+
+<div class="cta-band">
+  <h2>找不到合适的型号?</h2>
+  <p>告诉我们您的船型、用途与所在地区,我们将为您推荐最合适的 TOHATSU 配置与报价。</p>
+  <a href="contact.html" class="btn-white">立即咨询报价</a>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="ft">
+      <div>
+        <div class="f-logo">TOHATSU<span>.</span></div>
+        <div class="f-info">
+          拓哈苏(无锡)贸易有限公司<br>
+          TOHATSU (WUXI) TRADING CO., LTD<br>
+          无锡市惠山区洛社镇钱皋路218号<br>
+          sales@tohatsu-wuxi.com · 177 0619 8293
+        </div>
+      </div>
+      <div class="fl-cols">
+        <div class="fl-col">
+          <h4>导航</h4>
+          <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="products.html">产品系列</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+          </ul>
+        </div>
+        <div class="fl-col">
+          <h4>产品系列</h4>
+          <ul>
+            <li><a href="products-all.html">全部型号</a></li>
+            <li><a href="products.html">产品总览</a></li>
+            <li><a href="contact.html">咨询报价</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fb">
+      <div>© 2026 拓哈苏(无锡)贸易有限公司 · 日本TOHATSU中国区总代理</div>
+      <div style="color:rgba(255,255,255,.25)">苏ICP备XXXXXXXX号(备案审核中)</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+var fPower='all', fTech='all';
+function applyFilter(){
+  var cards=document.querySelectorAll('#modelGrid .pm-card');
+  var visible=0;
+  cards.forEach(function(c){
+    var p=c.getAttribute('data-power'), t=c.getAttribute('data-tech');
+    var show=(fPower==='all'||p===fPower)&&(fTech==='all'||t===fTech);
+    c.style.display=show?'':'none';
+    if(show)visible++;
+  });
+  document.getElementById('noResult').style.display=visible?'none':'block';
+  document.getElementById('resultCount').textContent='共 '+visible+' 款型号'+((fPower!=='all'||fTech!=='all')?' (已筛选)':'');
+}
+document.querySelectorAll('.filter-btn').forEach(function(b){
+  b.addEventListener('click',function(){
+    var f=b.getAttribute('data-filter'), v=b.getAttribute('data-val');
+    if(f==='power')fPower=v; else fTech=v;
+    document.querySelectorAll('.filter-btn[data-filter="'+f+'"]').forEach(function(x){x.classList.remove('on')});
+    b.classList.add('on');
+    applyFilter();
+  });
+});
+function resetFilter(){
+  fPower='all';fTech='all';
+  document.querySelectorAll('.filter-btn').forEach(function(x){x.classList.toggle('on',x.getAttribute('data-val')==='all')});
+  applyFilter();
+}
+applyFilter();
+</script>
+</body>
+</html>
