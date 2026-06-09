@@ -306,10 +306,16 @@ footer{background:var(--navy-dark);padding:40px 40px 24px;border-top:3px solid v
   .nav-cta{display:none}
   .logo-t{font-size:22px}
 
-  .hero{height:88vh;min-height:520px}
-  .hero-content{left:24px;right:24px;bottom:12%;max-width:none}
-  .h-title{font-size:44px}
-  .dots{right:24px;left:auto;bottom:24px}
+  .hero{height:auto;min-height:0}
+  .hero-slide{flex-direction:column}
+  .slide-img{position:relative;height:300px;order:2;transform:none}
+  .hero-slide.active .slide-img{transform:none}
+  .slide-overlay{display:none}
+  .hero-content{position:relative;order:1;flex:1;left:auto;right:auto;top:auto;bottom:auto;transform:none;background:var(--navy);padding:88px 24px 44px;max-width:none}
+  .h-eyebrow{margin-bottom:18px}
+  .h-title{font-size:38px;text-shadow:none;margin-bottom:18px;letter-spacing:-1px}
+  .h-sub{font-size:15px;text-shadow:none;margin-bottom:26px;color:rgba(255,255,255,.8)}
+  .dots{position:absolute;bottom:16px;left:50%;right:auto;transform:translateX(-50%)}
   .hero .btn-p,.hero .btn-s{padding:13px 28px;font-size:13px}
 
   .page-banner{padding:52px 24px}
