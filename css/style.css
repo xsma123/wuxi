@@ -133,9 +133,9 @@ nav{
 }
 .h-title em{color:var(--blue-light);font-style:normal;display:block}
 .h-sub{
-  font-size:17px;color:rgba(255,255,255,0.85);
-  margin-bottom:38px;line-height:1.9;max-width:540px;
-  text-shadow:0 1px 14px rgba(0,0,0,.35);
+  font-size:19px;color:rgba(255,255,255,0.9);
+  margin-bottom:36px;line-height:1.75;max-width:580px;
+  text-shadow:0 1px 14px rgba(0,0,0,.4);
 }
 .hero .btn-p{
   background:#fff;color:var(--navy);border-radius:50px;
@@ -314,7 +314,7 @@ footer{background:var(--navy-dark);padding:40px 40px 24px;border-top:3px solid v
   .hero-content{position:absolute;order:0;flex:none;left:24px;right:24px;top:auto;bottom:12%;transform:none;background:none;padding:0;max-width:none}
   .h-eyebrow{display:none}
   .h-title{font-size:40px;text-shadow:0 2px 20px rgba(0,0,0,0.45);margin-bottom:16px;letter-spacing:-1px}
-  .h-sub{font-size:14px;text-shadow:0 1px 10px rgba(0,0,0,0.45);margin-bottom:24px;color:rgba(255,255,255,0.85);max-width:none}
+  .h-sub{font-size:15px;text-shadow:0 1px 10px rgba(0,0,0,0.5);margin-bottom:24px;color:rgba(255,255,255,0.9);max-width:none}
   .dots{position:absolute;left:24px;right:auto;bottom:24px;transform:none}
   .hero .btn-p,.hero .btn-s{padding:13px 28px;font-size:13px}
 
