@@ -422,3 +422,41 @@ nav.nav-hero.scrolled{
 }
 /* 全局按钮圆角化(更现代) */
 .btn-p,.btn-s,.nav-cta,.cta-band .btn-white{border-radius:50px}
+
+/* ===================== 产品详情页 ===================== */
+.pd-breadcrumb{max-width:1240px;margin:0 auto;padding:26px 40px 0;font-size:13px;color:var(--muted)}
+.pd-breadcrumb a{color:var(--muted);text-decoration:none}
+.pd-breadcrumb a:hover{color:var(--blue)}
+.pd-hero{max-width:1240px;margin:0 auto;padding:30px 40px 60px;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.pd-img{background:#f4f2f5;border-radius:10px;padding:36px;display:flex;align-items:center;justify-content:center}
+.pd-img img{width:100%;height:auto;object-fit:contain;max-height:440px}
+.pd-badge{display:inline-block;background:var(--blue);color:#fff;font-size:12px;font-weight:700;letter-spacing:1px;padding:6px 14px;border-radius:5px;margin-bottom:18px}
+.pd-name{font-size:46px;font-weight:900;color:var(--navy);font-family:'Arial Black',Arial,sans-serif;line-height:1;margin-bottom:10px}
+.pd-power{font-size:21px;color:var(--blue);font-weight:700;margin-bottom:22px}
+.pd-desc{font-size:15px;color:var(--text);line-height:1.95;margin-bottom:30px}
+.pd-cta{display:flex;gap:14px;flex-wrap:wrap}
+.pd-secwrap{background:var(--light)}
+.pd-section{max-width:1240px;margin:0 auto;padding:60px 40px}
+.pd-h{font-size:14px;letter-spacing:3px;color:var(--blue);font-weight:700;text-transform:uppercase;margin-bottom:10px;display:block}
+.pd-h2{font-size:30px;font-weight:800;color:var(--navy);margin-bottom:34px}
+.spec-table{width:100%;border-collapse:collapse;font-size:14.5px;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+.spec-table tr{border-bottom:1px solid var(--border)}
+.spec-table tr:last-child{border-bottom:none}
+.spec-table th{text-align:left;padding:15px 20px;color:var(--muted);font-weight:600;width:36%;background:#fafafa;vertical-align:top}
+.spec-table td{padding:15px 20px;color:var(--navy);font-weight:500}
+.feat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.feat-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:26px 28px}
+.feat-card h4{font-size:16px;color:var(--navy);margin-bottom:16px;font-weight:700;padding-bottom:12px;border-bottom:2px solid var(--blue)}
+.feat-card ul{list-style:none;padding:0;margin:0}
+.feat-card li{font-size:14px;color:var(--text);line-height:1.7;padding-left:18px;position:relative;margin-bottom:10px}
+.feat-card li:before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;background:var(--blue);border-radius:50%}
+.pd-note{max-width:1240px;margin:0 auto;padding:0 40px 50px;font-size:12.5px;color:var(--muted);line-height:1.8}
+@media(max-width:900px){
+  .pd-hero{grid-template-columns:1fr;gap:28px;padding:24px 24px 44px}
+  .pd-name{font-size:38px}
+  .pd-section{padding:44px 24px}
+  .feat-grid{grid-template-columns:1fr;gap:18px}
+  .pd-breadcrumb{padding:22px 24px 0}
+  .pd-note{padding:0 24px 40px}
+  .spec-table th{width:44%}
+}
